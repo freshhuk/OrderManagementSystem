@@ -1,4 +1,11 @@
 package org.whiletrue.ordermanagementsystem.Domain.Models;
 
-public record CreateOrderRequest() {
-}
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
+
+import java.util.List;
+
+public record CreateOrderRequest(
+        @NotNull Long userId,
+        @NotEmpty List<OrderItemRequest> items
+) {}

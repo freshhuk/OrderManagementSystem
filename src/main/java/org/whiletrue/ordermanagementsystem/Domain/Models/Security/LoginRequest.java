@@ -1,4 +1,3 @@
 package org.whiletrue.ordermanagementsystem.Domain.Models.Security;
 
-public class LoginRequest {
-}
+public record LoginRequest(String email, String password) {}

@@ -1,4 +1,8 @@
 package org.whiletrue.ordermanagementsystem.Domain.Models;
 
-public record OrderItemRequest() {
-}
+import jakarta.validation.constraints.NotNull;
+
+public record OrderItemRequest(
+        @NotNull Long productId,
+        int quantity
+) {}
